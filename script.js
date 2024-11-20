@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
         slideIndex++;
         if (slideIndex > slides.length) slideIndex = 1; // Powrót do pierwszego slajdu
         slides[slideIndex - 1].style.display = "block"; // Pokaż aktualny slajd
-        setTimeout(showSlides, 3000); // Zmień slajd co 3 sekundy
+        setTimeout(showSlides, 7000); // Zmień slajd co 3 sekundy
     }
 
     showSlides(); // Rozpocznij pokaz slajdów
