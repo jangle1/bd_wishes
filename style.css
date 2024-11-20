@@ -87,7 +87,7 @@ body::before {
     border-radius: 15px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
     .slideshow-container {
         max-height: 50vh; /* Zmniejsz wysokość kontenera na małych ekranach */
     }
