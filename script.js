@@ -1,13 +1,14 @@
-// Tworzenie animacji konfetti
 document.addEventListener("DOMContentLoaded", () => {
-    const confettiContainer = document.querySelector(".confetti");
+    const slides = document.querySelectorAll(".slide");
+    let slideIndex = 0;
 
-    for (let i = 0; i < 200; i++) {
-        const confetti = document.createElement("div");
-        confetti.classList.add("confetti-piece");
-        confetti.style.left = `${Math.random() * 100}vw`;
-        confetti.style.animationDuration = `${Math.random() * 3 + 2}s`;
-        confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
-        confettiContainer.appendChild(confetti);
+    function showSlides() {
+        slides.forEach(slide => (slide.style.display = "none")); // Ukryj wszystkie slajdy
+        slideIndex++;
+        if (slideIndex > slides.length) slideIndex = 1; // Powrót do pierwszego slajdu
+        slides[slideIndex - 1].style.display = "block"; // Pokaż aktualny slajd
+        setTimeout(showSlides, 3000); // Zmień slajd co 3 sekundy
     }
+
+    showSlides(); // Rozpocznij pokaz slajdów
 });
