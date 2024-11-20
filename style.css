@@ -1,0 +1,101 @@
+/* Ogólne style */
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Brak przewijania */
+    font-family: 'Arial', sans-serif;
+    background-color: #fbe8a6; /* Jasny kolor tła */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Wysokość na cały ekran */
+}
+
+/* Animacja konfetti */
+.confetti {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* Centrum zawartości */
+.content {
+    position: relative;
+    text-align: center;
+    z-index: 2;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #d23600;
+    margin: 0 0 20px;
+}
+
+p {
+    font-size: 1.2em;
+    color: #333;
+    margin: 0 0 30px;
+    line-height: 1.5;
+}
+
+/* Zdjęcia */
+.images {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.images img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: pop 1s ease forwards;
+}
+
+.images img:nth-child(1) {
+    animation-delay: 0.5s;
+}
+
+.images img:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.images img:nth-child(3) {
+    animation-delay: 1.5s;
+}
+
+/* Efekt pojawiania się zdjęć */
+@keyframes pop {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.confetti-piece {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    animation: fall 5s linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100vh) rotate(0deg);
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
