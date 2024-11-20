@@ -44,8 +44,7 @@ body::before {
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     width: 80%; /* Poszerzenie zawartości */
-    height: 65%; /* Wyższe pole dla treści */
-    margin-top: -190px;
+    height: 80%; /* Wyższe pole dla treści */
 }
 
 /* Nagłówek */
@@ -90,7 +89,7 @@ body::before {
 
 @media (max-width: 768px) {
     .slideshow-container {
-        max-height: 38vh; /* Zmniejsz wysokość kontenera na małych ekranach */
+        max-height: 50vh; /* Zmniejsz wysokość kontenera na małych ekranach */
     }
 
     .header h1 {
